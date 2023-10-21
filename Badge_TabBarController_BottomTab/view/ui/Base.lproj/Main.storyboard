@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="03r-do-FEZ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
@@ -11,7 +11,7 @@
         <!--Item 2-->
         <scene sceneID="PFx-MI-aru">
             <objects>
-                <viewController id="WZF-EJ-4fR" sceneMemberID="viewController">
+                <viewController id="WZF-EJ-4fR" customClass="Item1ViewController" customModule="Badge_TabBarController_BottomTab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="86A-BH-Y4Y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,6 +31,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="X7S-g0-JPB"/>
+                    <connections>
+                        <outlet property="Item1TabBar" destination="X7S-g0-JPB" id="v3A-Mm-uLT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nm-tS-HHG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -39,7 +42,7 @@
         <!--Item 1-->
         <scene sceneID="XJC-Mt-HfY">
             <objects>
-                <viewController id="9eB-e9-Q6Q" sceneMemberID="viewController">
+                <viewController id="9eB-e9-Q6Q" customClass="Item0ViewController" customModule="Badge_TabBarController_BottomTab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MIk-SS-K3W">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,6 +51,9 @@
                                 <rect key="frame" x="139" y="408.66666666666669" width="115.33333333333331" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Badge 1 Btn"/>
+                                <connections>
+                                    <action selector="badgePlusBtn:" destination="9eB-e9-Q6Q" eventType="touchUpInside" id="Toe-0d-YwS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hXj-Ks-zbf"/>
@@ -66,8 +72,8 @@
         <!--Tab Bar Controller-->
         <scene sceneID="TRg-CR-KgN">
             <objects>
-                <tabBarController id="03r-do-FEZ" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gy0-fG-M3l">
+                <tabBarController id="03r-do-FEZ" customClass="TabBarController" customModule="Badge_TabBarController_BottomTab" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="gy0-fG-M3l">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
